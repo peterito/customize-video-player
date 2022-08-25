@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.2/css/fontawesome.min.css" integrity="sha384-X8QTME3FCg1DLb58++lPvsjbQoCT9bp3MsUU3grbIny/3ZwUJkRNO8NPW6zqzuW9" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/progress.css">
     <title>Custom Video player</title>
@@ -13,12 +13,14 @@
     <h1>Custom Video Player</h1>
     <video src="videos/gone.mp4" id="video" class="screen" poster="img/poster.png"></video>
     <div class="controls">
-        <div class="btn" id="play">
-            <i class="fa fa-play fa-2x"></i>
-        </div>
-        <div class="btn" id="stop">
-            <i class="fa fa-stop fa-2x"></i>
-        </div>
+        <button class="btn" id="play">
+            <i class="fa fa-play fa-2x">Play</i>
+        </button>
+        <button class="btn" id="stop">
+            <i class="fa fa-stop fa-2x">Stop</i>
+        </button>
+        <input type="range" id="progress" class="progress" min="0" max="100" step="0.1" value="0">
+        <span class="timestamp">00:00</span>
 
     </div>
     
