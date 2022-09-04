@@ -23,17 +23,31 @@ function updatePlayIcon(){
 }
 //update progress and timestamp
 function updateProgress(){
-    return true
+    progress.value = (video.currentTime / video.duration) * 100;
+
+    //Get minutes of the video
+    let mins = math.floor(video.currentTime / 60);
+    if (mins < 10){
+        mins = '0' + String(mins);
+    }
+
+    //Get seconds of the video
+    let secs = math.floor(video.currentTime % 60);
+    if (secs < 10){
+        mins = '0' + String(secs);
+    }
+
+    timestamp.innerHTML = `${mins}:${secs}` ;
 }
 
 //set video time to progress
 function setVideoProgress(){
-    return true
+    video.currentTime = (+progress.value * video.duration) / 100;
 }
 
 //stop video
 function stopVideo(){
-   video.currentTime = 0
+   video.currentTime = 0;
    video.paused();
 }
 
